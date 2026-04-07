@@ -169,7 +169,7 @@ export default function AirAmbulance() {
               className="relative"
             >
               <img
-                src="https://picsum.photos/seed/aircraftinterior/800/1000"
+                src="air.png"
                 alt="Inside Air Ambulance"
                 className="rounded-3xl shadow-2xl w-full h-[500px] object-cover"
                 referrerPolicy="no-referrer"
