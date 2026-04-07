@@ -75,6 +75,9 @@ const y = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
               <a href="tel:+919810012126" className="text-3xl font-bold text-red-600 hover:text-red-700 block">
                 +91 9810012126
               </a>
+              <a href="tel:+919810012126" className="text-3xl font-bold text-red-600 hover:text-red-700 block">
+                +91 01145531665
+              </a>
               <p className="text-sm text-red-800 mt-3">Call immediately for urgent medical transport needs.</p>
             </div>
 
