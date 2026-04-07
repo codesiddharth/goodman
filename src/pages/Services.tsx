@@ -24,7 +24,7 @@ export default function Services() {
       icon: Activity,
       title: "Ground Ambulance",
       description: "Advanced Life Support (ALS) and Basic Life Support (BLS) ambulances for emergency and non-emergency transport.",
-      image: "https://picsum.photos/seed/groundambulance/2000/1000",
+      image: "/ambulance.png",
       link: "/ground-ambulance",
       benefits: [
         "Fully equipped with ICU setup (Ventilators, Defibrillators)",
@@ -39,7 +39,7 @@ export default function Services() {
       icon: Plane,
       title: "Air Ambulance",
       description: "Domestic and international patient transfer via charter aircraft and commercial airline stretcher services.",
-      image: "https://picsum.photos/seed/airambulance/2000/1000",
+      image: "/air.png",
       link: "/air-ambulance",
       benefits: [
         "Bed-to-bed transfer service",
@@ -54,7 +54,7 @@ export default function Services() {
       icon: Shield,
       title: "Standby Medical Services",
       description: "Comprehensive medical coverage for corporate events, sports tournaments, and large gatherings.",
-      image: "https://picsum.photos/seed/standby/2000/1000",
+      image: "/doctor.png",
       link: "/standby-medical",
       benefits: [
         "On-site doctors, nurses, and paramedics",
@@ -69,7 +69,7 @@ export default function Services() {
       icon: BookOpen,
       title: "EMS Training",
       description: "Professional emergency medical training programs for healthcare providers and corporate teams.",
-      image: "https://picsum.photos/seed/emstraining/2000/1000",
+      image: "/ems.png",
       link: "/ems-training",
       benefits: [
         "Basic Life Support (BLS) & Advanced Cardiac Life Support (ACLS)",
@@ -84,7 +84,7 @@ export default function Services() {
       icon: Crown,
       title: "Goodmans Privé",
       description: "Concierge healthcare for the world's most discerning travellers.",
-      image: "https://picsum.photos/seed/concierge/2000/1000",
+      image: "/Untitled.jpg",
       link: "/goodmans_prive_web.html",
       benefits: [
         "24/7 dedicated medical concierge",
