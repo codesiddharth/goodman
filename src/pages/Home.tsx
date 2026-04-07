@@ -81,7 +81,7 @@ export default function Home() {
               Emergency Medical Assistance & <span className="text-primary-400">Air Ambulance</span> Services
             </h1>
             <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl">
-              Doctor-led pre-hospital care and patient transport with over 20+ years of experience. Based in New Delhi, serving globally.
+              Doctor-led pre-hospital care and patient transport with over 30+ years of experience. Based in New Delhi, serving globally.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <a
@@ -113,7 +113,7 @@ export default function Home() {
             className="grid grid-cols-2 lg:grid-cols-4 gap-8 divide-x divide-gray-100"
           >
             {[
-              { number: "20+", label: "Years Experience" },
+              { number: "30+", label: "Years Experience" },
               { number: "100%", label: "Doctor-Led Care" },
               { number: "10k+", label: "Patients Transported" },
               { number: "24/7", label: "Emergency Response" }
@@ -215,7 +215,7 @@ export default function Home() {
             >
               <div className="absolute inset-0 bg-primary-100 rounded-3xl transform -rotate-3 scale-105 z-0"></div>
               <img
-                src="https://picsum.photos/seed/medicalteam/800/1000"
+                src="/helicopter.png"
                 alt="Medical Team"
                 className="rounded-3xl shadow-2xl relative z-10 w-full h-[500px] object-cover"
                 referrerPolicy="no-referrer"
