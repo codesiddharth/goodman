@@ -87,7 +87,7 @@ const y = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
                   </div>
                   <div className="mt-1">
                     <p className="font-medium text-gray-900">Email</p>
-                    <a href="mailto:info@goodmansrescue.com" className="text-gray-600 hover:text-primary-600">info@goodmansrescue.com</a>
+                    <a href="mailto:info@goodmansrescue.com" className="text-gray-600 hover:text-primary-600">emsindia@gmail.com</a>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
