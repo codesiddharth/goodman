@@ -1,5 +1,5 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import { Phone, Mail, MapPin, Menu, X, HeartPulse, MessageCircle, ChevronDown } from 'lucide-react';
+import { Phone, Mail, MapPin, Menu, X, HeartPulse, MessageCircle, ChevronDown, Linkedin, Facebook, Instagram, Twitter } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useScroll } from 'motion/react';
 
@@ -272,16 +272,42 @@ export default function Layout() {
                 30+ years of excellence in emergency medical assistance and air ambulance services. Doctor-led, globally trusted.
               </p>
               <div className="flex space-x-4">
-                {/* Social Icons Placeholders */}
-                <div className="w-10 h-10 rounded-full bg-primary-900 flex items-center justify-center hover:bg-primary-800 cursor-pointer transition-colors">
-                  <span className="text-primary-400 font-bold">in</span>
-                </div>
-                <div className="w-10 h-10 rounded-full bg-primary-900 flex items-center justify-center hover:bg-primary-800 cursor-pointer transition-colors">
-                  <span className="text-primary-400 font-bold">tw</span>
-                </div>
-                <div className="w-10 h-10 rounded-full bg-primary-900 flex items-center justify-center hover:bg-primary-800 cursor-pointer transition-colors">
-                  <span className="text-primary-400 font-bold">fb</span>
-                </div>
+                <a
+                  href="https://www.linkedin.com/in/goodmansrescue/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Goodmans Rescue LinkedIn"
+                  className="w-10 h-10 rounded-full bg-primary-900 flex items-center justify-center hover:bg-primary-800 transition-colors"
+                >
+                  <Linkedin className="w-5 h-5 text-primary-400" />
+                </a>
+                <a
+                  href="https://www.facebook.com/Goodmansrescue"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Goodmans Rescue Facebook"
+                  className="w-10 h-10 rounded-full bg-primary-900 flex items-center justify-center hover:bg-primary-800 transition-colors"
+                >
+                  <Facebook className="w-5 h-5 text-primary-400" />
+                </a>
+                <a
+                  href="https://www.instagram.com/goodmansrescue/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Goodmans Rescue Instagram"
+                  className="w-10 h-10 rounded-full bg-primary-900 flex items-center justify-center hover:bg-primary-800 transition-colors"
+                >
+                  <Instagram className="w-5 h-5 text-primary-400" />
+                </a>
+                <a
+                  href="https://x.com/goodmansrescue"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Goodmans Rescue X"
+                  className="w-10 h-10 rounded-full bg-primary-900 flex items-center justify-center hover:bg-primary-800 transition-colors"
+                >
+                  <Twitter className="w-5 h-5 text-primary-400" />
+                </a>
               </div>
             </div>
 
