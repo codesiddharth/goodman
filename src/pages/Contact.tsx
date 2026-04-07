@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin, Clock, AlertTriangle } from 'lucide-react';
-import { motion, useScroll, useTransform } from 'motion/react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
 const fadeUp = {
@@ -10,19 +10,38 @@ const fadeUp = {
 };
 
 export default function Contact() {
+
   const heroRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ["start start", "end start"]
-  });
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
+
+const { scrollYProgress } = useScroll({
+  target: heroRef,
+  offset: ["start start", "end start"]
+});
+
+const y = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+
+    const formData = Object.fromEntries(new FormData(e.target));
+
+    await fetch("https://hook.eu2.make.com/uw3hs54x69lv7vl6hzalub31bogs1y2s", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(formData)
+    });
+
+    alert("Submitted successfully");
+  };
 
   return (
     <div className="bg-slate-50 min-h-screen">
       <div ref={heroRef} className="bg-primary-950 py-20 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
            <motion.img 
-            style={{ y }}
+            style={{ y: y }}
             src="https://picsum.photos/seed/customersupport/1920/1080" 
             alt="Customer Support Background" 
             className="w-full h-full object-cover"
@@ -105,37 +124,45 @@ export default function Contact() {
               <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4">Request a Quote / Consultation</h2>
               <p className="text-gray-600 mb-8 text-lg">Please provide as much detail as possible so our medical team can assess the situation accurately.</p>
               
-              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div>
+                                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Your Name *</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors bg-gray-50 focus:bg-white" required />
+                    <input name="name" type="text" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors bg-gray-50 focus:bg-white" required />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
-                    <input type="tel" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors bg-gray-50 focus:bg-white" required />
+                    <input name="phone" type="tel" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors bg-gray-50 focus:bg-white" required />
                   </div>
                 </div>
                 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
-                  <input type="email" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors bg-gray-50 focus:bg-white" required />
+                  <input name="email" type="email" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors bg-gray-50 focus:bg-white" required />
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Current Location (City/Country) *</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors bg-gray-50 focus:bg-white" required />
+                    <input name="from" type="text" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors bg-gray-50 focus:bg-white" required />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Destination (City/Country) *</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors bg-gray-50 focus:bg-white" required />
+                    <input name="to" type="text" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors bg-gray-50 focus:bg-white" required />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Patient's Brief Medical Condition *</label>
-                  <textarea rows={4} className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors bg-gray-50 focus:bg-white" required></textarea>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+    Patient's Brief Medical Condition *
+                </label>
+
+                <textarea
+                name="condition"
+                rows={4}
+                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors bg-gray-50 focus:bg-white"
+                required
+                  ></textarea>
                 </div>
 
                 <button type="submit" className="w-full bg-primary-600 text-white font-bold py-4 rounded-xl hover:bg-primary-700 transition-colors shadow-lg shadow-primary-600/30 text-lg mt-4">
