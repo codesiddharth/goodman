@@ -40,7 +40,7 @@ export default function About() {
         <motion.div {...fadeUp} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">About Goodmans Rescue</h1>
           <p className="text-xl text-primary-200 max-w-2xl mx-auto">
-            Over two decades of unwavering commitment to saving lives through rapid medical transport and pre-hospital care.
+            Over three decades of unwavering commitment to saving lives through rapid medical transport and pre-hospital care.
           </p>
         </motion.div>
       </div>
@@ -56,9 +56,9 @@ export default function About() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-primary-600 font-semibold tracking-wide uppercase text-sm mb-3">Our Story</h2>
-              <h3 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-6">20+ Years of Excellence in Medical Assistance</h3>
+              <h3 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-6">30+ Years of Excellence in Medical Assistance</h3>
               <p className="text-lg text-gray-600 mb-6">
-                Founded in New Delhi, Goodmans Rescue is a doctor-led medical assistance company with over 20 years of experience. We began with a simple yet profound mission: to provide safe, rapid, and reliable medical transport for patients in critical need.
+                Founded in New Delhi, Goodmans Rescue is a doctor-led medical assistance company with over 30 years of experience. We began with a simple yet profound mission: to provide safe, rapid, and reliable medical transport for patients in critical need.
               </p>
               <p className="text-lg text-gray-600 mb-8">
                 Today, we stand as one of India's most trusted emergency response and aeromedical evacuation companies. We specialize in pre-hospital care, advanced life support ambulances, air ambulance services, and comprehensive medical training.
@@ -79,13 +79,13 @@ export default function About() {
               className="relative"
             >
               <img
-                src="https://picsum.photos/seed/doctors/800/1000"
+                src="/Untitled.jpg"
                 alt="Medical Professionals"
                 className="rounded-3xl shadow-2xl w-full h-[500px] object-cover"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 hidden md:block">
-                <div className="text-4xl font-heading font-bold text-primary-600 mb-1">20+</div>
+                <div className="text-4xl font-heading font-bold text-primary-600 mb-1">30+</div>
                 <div className="text-sm font-medium text-gray-500 uppercase tracking-wider">Years Experience</div>
               </div>
             </motion.div>
