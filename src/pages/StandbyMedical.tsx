@@ -168,7 +168,7 @@ export default function StandbyMedical() {
               className="relative"
             >
               <img
-                src="https://picsum.photos/seed/eventmedical/800/1000"
+                src="/doctor.png"
                 alt="Event Medical Coverage"
                 className="rounded-3xl shadow-2xl w-full h-[500px] object-cover"
                 referrerPolicy="no-referrer"
