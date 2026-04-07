@@ -99,22 +99,16 @@ export default function Layout() {
         className={`sticky top-0 z-40 transition-all duration-300 ${
           isScrolled ? 'bg-white shadow-md py-3' : 'bg-white/95 backdrop-blur-sm py-5'
         }`}
-      >
+      > 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="bg-primary-600 p-2 rounded-lg">
-                <HeartPulse className="w-8 h-8 text-white" />
-              </div>
-              <div>
-                <span className="block font-heading font-bold text-xl text-primary-950 leading-none">
-                  Goodmans Rescue
-                </span>
-                <span className="block text-xs text-primary-600 font-medium tracking-wider uppercase mt-1">
-                  Medical Assistance
-                </span>
-              </div>
-            </Link>
+            <Link to="/" className="flex items-center">
+            <img 
+              src="/logoheader.jpg" 
+              alt="Goodmans Rescue Logo"
+              className="h-12 md:h-14 w-auto object-contain"
+              />
+</Link>
 
             {/* Desktop Menu */}
             <div className="hidden lg:flex items-center space-x-8">
@@ -275,7 +269,7 @@ export default function Layout() {
                 <span className="font-heading font-bold text-2xl">Goodmans Rescue</span>
               </Link>
               <p className="text-gray-400 mb-6">
-                20+ years of excellence in emergency medical assistance and air ambulance services. Doctor-led, globally trusted.
+                30+ years of excellence in emergency medical assistance and air ambulance services. Doctor-led, globally trusted.
               </p>
               <div className="flex space-x-4">
                 {/* Social Icons Placeholders */}
@@ -325,6 +319,10 @@ export default function Layout() {
                 <li className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-primary-400 shrink-0" />
                   <span>+91 9810012126</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <Phone className="w-5 h-5 text-primary-400 shrink-0" />
+                  <span>+91 01145531665</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-primary-400 shrink-0" />
