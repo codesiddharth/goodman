@@ -279,52 +279,15 @@ export default function Layout() {
               </p>
               <div className="flex space-x-4">
                 {/* Social Icons Placeholders */}
-                import { FaLinkedinIn, FaFacebookF, FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-
-<div className="flex gap-3">
-  
-  {/* LinkedIn */}
-  <a 
-    href="https://www.linkedin.com/in/goodmansrescue/" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    className="w-10 h-10 rounded-full bg-primary-900 flex items-center justify-center hover:bg-primary-800 transition-colors"
-  >
-    <FaLinkedinIn className="text-primary-400 text-lg" />
-  </a>
-
-  {/* Facebook */}
-  <a 
-    href="https://www.facebook.com/Goodmansrescue" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    className="w-10 h-10 rounded-full bg-primary-900 flex items-center justify-center hover:bg-primary-800 transition-colors"
-  >
-    <FaFacebookF className="text-primary-400 text-lg" />
-  </a>
-
-  {/* Instagram */}
-  <a 
-    href="https://www.instagram.com/goodmansrescue/" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    className="w-10 h-10 rounded-full bg-primary-900 flex items-center justify-center hover:bg-primary-800 transition-colors"
-  >
-    <FaInstagram className="text-primary-400 text-lg" />
-  </a>
-
-  {/* X (Twitter) */}
-  <a 
-    href="https://x.com/goodmansrescue" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    className="w-10 h-10 rounded-full bg-primary-900 flex items-center justify-center hover:bg-primary-800 transition-colors"
-  >
-    <FaXTwitter className="text-primary-400 text-lg" />
-  </a>
-
-</div>
+                <div className="w-10 h-10 rounded-full bg-primary-900 flex items-center justify-center hover:bg-primary-800 cursor-pointer transition-colors">
+                  <span className="text-primary-400 font-bold">in</span>
+                </div>
+                <div className="w-10 h-10 rounded-full bg-primary-900 flex items-center justify-center hover:bg-primary-800 cursor-pointer transition-colors">
+                  <span className="text-primary-400 font-bold">tw</span>
+                </div>
+                <div className="w-10 h-10 rounded-full bg-primary-900 flex items-center justify-center hover:bg-primary-800 cursor-pointer transition-colors">
+                  <span className="text-primary-400 font-bold">fb</span>
+                </div>
               </div>
             </div>
 
