@@ -96,7 +96,7 @@ const y = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
                   </div>
                   <div className="mt-1">
                     <p className="font-medium text-gray-900">Headquarters</p>
-                    <p className="text-gray-600">New Delhi, India</p>
+                    <p className="text-gray-600">M 2 Basement, Block B, Greater Kailash I, Greater Kailash, New Delhi, Delhi 110048</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
