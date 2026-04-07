@@ -29,10 +29,10 @@ export default function EmsTraining() {
     <div className="bg-slate-50 min-h-screen">
       {/* Page Header */}
       <div ref={heroRef} className="bg-primary-950 py-24 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
+        <div className="absolute inset-0 opacity 100">
           <motion.img 
             style={{ y }}
-            src="https://picsum.photos/seed/emstraining/1920/1080" 
+            src="/ems.png"
             alt="EMS Training" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -168,7 +168,7 @@ export default function EmsTraining() {
               className="relative"
             >
               <img
-                src="https://picsum.photos/seed/cprtraining/800/1000"
+                src="/training.png"
                 alt="CPR Training"
                 className="rounded-3xl shadow-2xl w-full h-[500px] object-cover"
                 referrerPolicy="no-referrer"
