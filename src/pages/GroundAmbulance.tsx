@@ -169,9 +169,9 @@ export default function GroundAmbulance() {
               className="relative"
             >
               <img
-                src="https://picsum.photos/seed/ambulanceinterior/800/1000"
+                src="/ambulance.png" 
                 alt="Inside Ground Ambulance"
-                className="rounded-3xl shadow-2xl w-full h-[500px] object-cover"
+                className="rounded-3xl shadow-2xl w-full h-[700px] object-cover"
                 referrerPolicy="no-referrer"
               />
             </motion.div>
