@@ -1,7 +1,6 @@
 import { Plane, Users, Activity, Stethoscope, Globe, HeartPulse, BookOpen, Crown, Home as HomeIcon, Shield, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { motion, useScroll, useTransform } from 'motion/react';
-import { useRef } from 'react';
+import { motion } from 'motion/react';
 
 const fadeUp = {
   initial: { opacity: 0, y: 50 },
@@ -11,13 +10,6 @@ const fadeUp = {
 };
 
 export default function Services() {
-  const heroRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ["start start", "end start"]
-  });
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
-
   const services = [
     {
       id: "ground-ambulance",
@@ -99,19 +91,11 @@ export default function Services() {
   return (
     <div className="bg-slate-50 min-h-screen">
       {/* Page Header */}
-      <div ref={heroRef} className="bg-primary-950 py-20 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-           <motion.img 
-            style={{ y }}
-            src="https://picsum.photos/seed/medicalservices/1920/1080" 
-            alt="Medical Services Background" 
-            className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
-          />
-        </div>
+      <div className="bg-gray-50 py-16 text-gray-900 border-b border-gray-100 relative overflow-hidden">
+        <img src="/sky.jpg" alt="Sky Background" className="absolute inset-0 w-full h-full object-cover opacity-30" referrerPolicy="no-referrer" />
         <motion.div {...fadeUp} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">Our Services</h1>
-          <p className="text-xl text-primary-200 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Comprehensive emergency medical assistance and patient transport solutions.
           </p>
         </motion.div>
