@@ -54,16 +54,15 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section ref={heroRef} className="relative bg-primary-950 text-white overflow-hidden">
+      <section ref={heroRef} className="relative overflow-hidden bg-gradient-to-b from-sky-200 via-blue-100 to-sky-50">
         <div className="absolute inset-0 z-0">
-          <motion.img
-            style={{ y, opacity }}
-            src="https://picsum.photos/seed/ambulance/1920/1080"
-            alt="Air Ambulance"
+          <img
+            src="/sky.jpg"
+            alt="Blue Sky with Clouds"
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-950 via-primary-950/90 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-sky-100/80 via-sky-50/60 to-transparent"></div>
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
@@ -73,27 +72,27 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <div className="inline-flex items-center space-x-2 bg-primary-800/50 rounded-full px-4 py-2 mb-8 border border-primary-700 backdrop-blur-sm">
-              <span className="flex h-2 w-2 rounded-full bg-green-400 animate-pulse"></span>
-              <span className="text-sm font-medium text-primary-100">Available 24/7 for Emergencies</span>
+            <div className="inline-flex items-center space-x-2 bg-blue-200/60 rounded-full px-4 py-2 mb-8 border border-blue-300 backdrop-blur-sm">
+              <span className="flex h-2 w-2 rounded-full bg-green-600 animate-pulse"></span>
+              <span className="text-sm font-medium text-blue-900">Available 24/7 for Emergencies</span>
             </div>
-            <h1 className="text-5xl lg:text-7xl font-heading font-bold leading-tight mb-6">
-              Emergency Medical Assistance & <span className="text-primary-400">Air Ambulance</span> Services
+            <h1 className="text-5xl lg:text-7xl font-heading font-bold leading-tight mb-6 text-primary-900">
+              Emergency Medical Assistance & <span className="text-primary-600">Air Ambulance</span> Services
             </h1>
-            <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl">
+            <p className="text-xl text-gray-700 mb-10 leading-relaxed max-w-2xl">
               Doctor-led pre-hospital care and patient transport with over 30+ years of experience. Based in New Delhi, serving globally.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <a
                 href="tel:+919810012126"
-                className="bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-full font-medium text-lg transition-colors flex items-center justify-center space-x-2 shadow-lg shadow-primary-500/30"
+                className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-full font-medium text-lg transition-colors flex items-center justify-center space-x-2 shadow-lg shadow-primary-600/30"
               >
                 <PhoneCall className="w-5 h-5" />
                 <span>Call Now</span>
               </a>
               <Link
                 to="/contact"
-                className="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-4 rounded-full font-medium text-lg transition-colors flex items-center justify-center space-x-2 backdrop-blur-sm"
+                className="bg-blue-600/80 hover:bg-blue-700 text-white border border-blue-300 px-8 py-4 rounded-full font-medium text-lg transition-colors flex items-center justify-center space-x-2 backdrop-blur-sm"
               >
                 <span>Book Ambulance</span>
                 <ArrowRight className="w-5 h-5" />
