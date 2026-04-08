@@ -1,7 +1,6 @@
 import { Activity, Shield, Clock, HeartPulse, CheckCircle2, PhoneCall } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { motion, useScroll, useTransform } from 'motion/react';
-import { useRef } from 'react';
+import { motion } from 'motion/react';
 
 const fadeUp = {
   initial: { opacity: 0, y: 50 },
@@ -18,43 +17,27 @@ const staggerContainer = {
 };
 
 export default function GroundAmbulance() {
-  const heroRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ["start start", "end start"]
-  });
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
-
   return (
     <div className="bg-slate-50 min-h-screen">
       {/* Page Header */}
-      <div ref={heroRef} className="bg-primary-950 py-24 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
-          <motion.img 
-            style={{ y }}
-            src="https://picsum.photos/seed/groundambulance/1920/1080" 
-            alt="Ground Ambulance" 
-            className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-950 via-primary-900/80 to-transparent"></div>
-        </div>
+      <div className="bg-gray-50 py-16 text-gray-900 border-b border-gray-100 relative overflow-hidden">
+        <img src="/sky.jpg" alt="Sky Background" className="absolute inset-0 w-full h-full object-cover opacity-30" referrerPolicy="no-referrer" />
         <motion.div {...fadeUp} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center space-x-2 bg-primary-800/50 rounded-full px-4 py-2 mb-6 border border-primary-700 backdrop-blur-sm">
-              <Activity className="w-4 h-4 text-primary-200" />
-              <span className="text-sm font-medium text-primary-100">Advanced Life Support Transport</span>
+            <div className="inline-flex items-center space-x-2 bg-blue-100 rounded-full px-4 py-2 mb-6 border border-blue-200 backdrop-blur-sm">
+              <Activity className="w-4 h-4 text-blue-600" />
+              <span className="text-sm font-medium text-blue-900">Advanced Life Support Transport</span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6 leading-tight text-gray-900">
               Ground Ambulance Services
             </h1>
-            <p className="text-xl text-primary-100 mb-8 leading-relaxed">
+            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               Fully equipped ICU ambulances with experienced doctors and paramedics for safe inter-city and inter-hospital transfers.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <a
                 href="tel:+919810012126"
-                className="bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-full font-medium text-lg transition-colors flex items-center justify-center space-x-2 shadow-lg shadow-primary-500/30"
+                className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-full font-medium text-lg transition-colors flex items-center justify-center space-x-2 shadow-lg shadow-primary-600/30"
               >
                 <PhoneCall className="w-5 h-5" />
                 <span>Call for Ambulance</span>
